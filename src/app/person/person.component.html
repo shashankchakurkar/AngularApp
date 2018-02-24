@@ -1,0 +1,48 @@
+<div class="row">
+    <div class="col-sm-12 col-sm-offset-0">
+        <div id="imaginary_container"> 
+            <div class="input-group stylish-input-group">
+                <input type="text" class="form-control"  placeholder="Search"  >
+                <span class="input-group-addon">
+                    <button type="submit">
+                        <span class="glyphicon glyphicon-search"></span>
+                    </button>  
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-danger">
+  <div class="panel-heading">
+  </div>
+  <div class="panel-body">
+
+      <table class="table table-responsive table-bordered table-striped table-hover">
+          <tr>
+            <th>
+              Name
+            </th>
+            <th>Username </th>
+            <th>Website </th>
+            <th>Email</th>
+          </tr>
+          <tr *ngFor="let name of doctors ">
+            <td>
+              {{name.name}}
+            </td>
+            <td>
+              {{name.username}}
+            </td>
+            <td>
+              {{name.website }}
+            </td>
+            <td>
+              {{name.email }}
+            </td>
+          </tr>
+        </table>
+    
+  </div>
+
+</div>

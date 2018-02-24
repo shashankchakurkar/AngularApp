@@ -1,0 +1,49 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    Guest User
+
+  </div>
+  <div class="panel-body">
+
+
+    <h1>Welcome {{firstName}}!</h1>
+    <div>
+
+        <input type="text"  name="searchString" 
+        placeholder="Type to search..." [(ngModel)]="searchString">
+
+      Your deatils are as follow:
+      <table class="table table-responsive table-bordered table-striped table-hover">
+        <tr>
+          <td>
+            First Name
+          </td>
+          <td>Last Name </td>
+          <td>Contact </td>
+          <td>Email</td>
+        </tr>
+        <tr *ngFor="let name of names ">
+          <td>
+            {{name.firstName}}
+          </td>
+          <td>
+            {{name.lastName}}
+          </td>
+          <td>
+            {{name.contact }}
+          </td>
+          <td>
+            {{name.email }}
+          </td>
+        </tr>
+      </table>
+      <div *ngIf="condition2; else condition1">
+        This will be displayed if the condition is true!
+      </div>
+      <ng-template #condition1> This will be displayed if the condition is false!</ng-template>
+      <ng-template #condition2> This will be displayed if the condition is true!</ng-template>
+    </div>
+
+  </div>
+
+</div>
